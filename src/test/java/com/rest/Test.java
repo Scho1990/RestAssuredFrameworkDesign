@@ -62,6 +62,7 @@ public class Test {
                 then().
                 assertThat().
                 statusCode(200).extract().response();
+
         // solution-1
         JsonPath jsonPath = new JsonPath(response.asString());
         System.out.println(jsonPath.getString("workspaces[0].name"));
