@@ -6,7 +6,7 @@ import static io.restassured.RestAssured.*;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
-public class Test {
+public class BasicConceptRestAssured {
 
     @org.testng.annotations.Test
     public void validate_get_status_code(){
@@ -62,6 +62,7 @@ public class Test {
                 then().
                 assertThat().
                 statusCode(200).extract().response();
+
 
         // solution-1
         JsonPath jsonPath = new JsonPath(response.asString());
